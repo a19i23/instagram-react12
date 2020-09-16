@@ -1,16 +1,16 @@
+import React from 'react';
+import { useLoginPageStyles } from '../styles';
+import SEO from '../components/shared/Seo';
 import {
-  Button,
   Card,
   CardHeader,
   TextField,
+  Button,
   Typography,
 } from '@material-ui/core';
-import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from '../components/shared/Seo';
-import { useLoginPageStyles } from '../styles';
-import FaceBookIconBlue from '../images/facebook-icon-blue.svg';
-import FaceBookIconWhite from '../images/facebook-icon-white.png';
+import FacebookIconBlue from '../images/facebook-icon-blue.svg';
+import FacebookIconWhite from '../images/facebook-icon-white.png';
 
 function LoginPage() {
   const classes = useLoginPageStyles();
@@ -35,10 +35,10 @@ function LoginPage() {
                 fullWidth
                 variant="filled"
                 label="Password"
-                type="password"
                 margin="dense"
                 className={classes.textField}
                 autoComplete="current-password"
+                type="password"
               />
               <Button
                 variant="contained"
@@ -64,9 +64,8 @@ function LoginPage() {
               <Typography variant="caption">Forgot password?</Typography>
             </Button>
           </Card>
-
           <Card className={classes.signUpCard}>
-            <Typography variant="body2" align="right">
+            <Typography align="right" variant="body2">
               Don't have an account?
             </Typography>
             <Link to="/accounts/emailsignup">
@@ -84,7 +83,7 @@ function LoginPage() {
 export function LoginWithFacebook({ color, iconColor, variant }) {
   const classes = useLoginPageStyles();
   const facebookIcon =
-    iconColor === 'blue' ? FaceBookIconBlue : FaceBookIconWhite;
+    iconColor === 'blue' ? FacebookIconBlue : FacebookIconWhite;
 
   return (
     <Button fullWidth color={color} variant={variant}>

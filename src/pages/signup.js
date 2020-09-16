@@ -1,13 +1,12 @@
-import { Button, Card, TextField, Typography } from '@material-ui/core';
 import React from 'react';
-import SEO from '../components/shared/Seo';
 import { useSignUpPageStyles } from '../styles';
+import SEO from '../components/shared/Seo';
+import { Card, Typography, TextField, Button } from '@material-ui/core';
 import { LoginWithFacebook } from './login';
 import { Link } from 'react-router-dom';
 
 function SignUpPage() {
   const classes = useSignUpPageStyles();
-
   return (
     <>
       <SEO title="Sign up" />
@@ -20,7 +19,7 @@ function SignUpPage() {
             </Typography>
             <LoginWithFacebook
               color="primary"
-              icon="white"
+              iconColor="white"
               variant="contained"
             />
             <div className={classes.orContainer}>
@@ -76,7 +75,6 @@ function SignUpPage() {
               </Button>
             </form>
           </Card>
-
           <Card className={classes.loginCard}>
             <Typography align="right" variant="body2">
               Have an account?
