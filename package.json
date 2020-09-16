@@ -33,7 +33,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "now-build": "react-scripts build",
-    "deploy": "npx now --target production"
+    "deploy": "npx now --prod"
   },
   "eslintConfig": {
     "extends": "react-app"
